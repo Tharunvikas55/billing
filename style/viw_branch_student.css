@@ -1,0 +1,21 @@
+body {
+    background-image: url('./assests/white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+.mt-4{
+    text-align: center;
+}
+.row{
+    padding-top: 50px;
+}
+.cd:hover .card:hover {
+    background-color: #34dd86; /* Change this to your desired color */
+    color: #e8e8e8; /* Change this to your desired text color */
+}

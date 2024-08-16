@@ -1,0 +1,160 @@
+/* body {
+    background-image: url('/assests/white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    margin: 0; /* Remove default body margin */
+    /* padding: 0;  */
+
+.modal-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add hover effect to top buttons */
+.top-buttons button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add transition to badge */
+.card-title .badge {
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Add transition to modal close button */
+.close {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Add hover effect to cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add transition to card title */
+.card-title {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Add hover effect to links inside cards */
+.card a:hover {
+    color: #17a2b8; /* Change the color to your preference */
+}
+
+/* Add animation to the logout button */
+.btn-outline-danger.btn-sm:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.custom-btn {
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.top-buttons button {
+    margin: 0 10px; /* Add space between buttons */
+    padding: 15px 30px; /* Adjust these values to control height and width */
+    font-size: 16px; /* You can adjust font size based on your preference */
+}
+
+.logout-button {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.logout-button button {
+    padding: 15px 30px; /* Adjust the padding for the desired button size */
+}
+
+.top-buttons .btn {
+    padding: 15px 30px; /* You can adjust padding based on your preference */
+    font-size: 16px; /* You can adjust font size based on your preference */
+}
+.top-buttons .btn {
+    padding: 15px 30px; /* Adjust padding for height and width */
+    font-size: 16px; /* Adjust font size */
+}
+.btn-lg {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-lg:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1; /* Move the pseudo-element behind the content */
+}
+
+.btn-lg:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-lg span {
+    position: relative;
+    z-index: 2; /* Ensure the text appears on top */
+    display: block;
+}
+
+.btn-lg:hover span {
+    color: #f9f9f9;
+    font-weight: bold;
+}
+.btn-blue {
+    border: 3px solid #3498db; /* Increase border width */
+}
+
+.btn-green {
+    border: 3px solid #2ecc71;
+}
+
+.btn-yellow {
+    border: 3px solid #f39c12;
+}
+
+.btn-red {
+    border: 3px solid #e74c3c;
+}
+
+.btn-purple {
+    border: 3px solid #9b59b6;
+}

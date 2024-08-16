@@ -1,0 +1,37 @@
+body {
+    background-image: url('../assests/white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 7rem;
+    background-color: rgba(249, 233, 233, 0.69);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}

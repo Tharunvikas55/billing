@@ -1,0 +1,56 @@
+<?php
+include 'admin.php';
+include 'session_helper.php';
+
+// Function to get invoice details by invoice number
+function getInvoiceDetailsByNumber($conn, $invoiceNumber) {
+    $invoiceNumber = mysqli_real_escape_string($conn, $invoiceNumber);
+    $result = $conn->query("SELECT * FROM invoices WHERE invoice_number = '$invoiceNumber'");
+
+    if ($result && $result->num_rows > 0) {
+        return $result->fetch_assoc();
+    }
+
+    return null;
+}
+
+if (isset($_POST['payDue'])) {
+    $invoiceNumber = mysqli_real_escape_string($conn, $_POST['invoiceNumber']);
+    $actualAmount = mysqli_real_escape_string($conn, $_POST['actualAmount']);
+
+    // Get invoice details
+    $invoiceDetails = getInvoiceDetailsByNumber($conn, $invoiceNumber);
+
+    if ($invoiceDetails) {
+        $dueAmount = $invoiceDetails['due_amount'];
+        $newDueAmount = $dueAmount - $actualAmount;
+
+        // Update invoices table with new due amount and status
+        $updateQuery = "UPDATE invoices SET due_amount = ?, invoice_status = ? WHERE invoice_number = ?";
+        $stmt = $conn->prepare($updateQuery);
+
+        if (!$stmt) {
+            die('Error in prepare statement: ' . $conn->error);
+        }
+
+        $status = ($newDueAmount == 0 ? 'Paid' : 'Due');
+        $stmt->bind_param("dss", $newDueAmount, $status, $invoiceNumber);
+
+        if (!$stmt->execute()) {
+            die('Error in execute statement: ' . $stmt->error);
+        }
+
+        $stmt->close();
+
+        // Perform additional actions if needed
+
+        // Redirect or provide success response
+        header("Location: branch_admin_dashboard.php");
+        exit();
+    } else {
+        echo "Error: Invoice not found.";
+    }
+} else {
+    echo "Error: Invalid request.";
+}
+?>

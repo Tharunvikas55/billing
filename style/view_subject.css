@@ -1,0 +1,55 @@
+body {
+    background-image: url('../assests/white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+.custom-padding {
+    padding-left: 28%; /* Adjust the value according to your preference */
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: rgba(254, 254, 254, 0.64);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.table tbody + tbody {
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-glass {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-glass:hover {
+    background-color: #fff;
+    color: #000;
+}

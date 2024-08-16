@@ -1,0 +1,20 @@
+$dueamount = ($grandTotal - $paidAmount);
+
+
+  // Generate the invoice number
+  $invoiceNumber = generateInvoiceNumber($conn, $branchID, $invoiceDate);
+     
+    //$invoiceStatus = ($paidAmount >= $grandTotal * 0.5) ? 'Paid' : 'Due';
+    $invoiceStatus = ($dueamount == 0) ? 'Paid' : 'Due';
+    $sql = "INSERT INTO invoices (branch_id, student_id, invoice_number, grand_total, invoice_date, student_name, contact_number, address, paid_amount, due_amount, invoice_status, subject_name)
+    VALUES ('$branchID', '$studentID', '$invoiceNumber', '$grandTotal', CAST('$invoiceDate' AS DATE), '$studentName', '$contact', '$address', '$paidAmount', '$grandTotal' - '$paidAmount', '$invoiceStatus', '$subjectNamesString')";
+    
+    
+
+    if ($conn->query($sql) === TRUE) {
+        // Invoice details inserted successfully
+        echo "New invoice added successfully!";
+    } else {
+        // Error inserting invoice details
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }

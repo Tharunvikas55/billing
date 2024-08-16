@@ -1,0 +1,32 @@
+/* style.css */
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://a1hometuition.com/wp-content/uploads/2020/04/igcse-home-tuition-04a-1.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif; /* Add your preferred font family */
+}
+
+.container {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+}
+
+.card-header {
+    font-size: 24px;
+    color: #fff; /* Text color for better contrast with the background */
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Optional: Add additional styles as needed */

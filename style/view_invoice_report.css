@@ -1,0 +1,44 @@
+body{
+    background-image: url('../assests/6274658.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+  /* Add glass morphism effect to the table container */
+  .table-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Set the table background color and style */
+.table {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Set the text color for the table headers */
+.table thead th {
+    color: white;
+}
+
+/* Set the text color for the table rows */
+.table tbody tr {
+    color: white;
+}
+
+/* Set the background color for the table rows */
+.table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+/* Add bold and color styles for table text */
+.bold-color {
+    font-weight: bold;
+    color: black; /* Replace 'your_color_code' with the desired color code */
+}
+
+

@@ -1,0 +1,31 @@
+<?php
+include 'admin.php';
+
+// Fetch all unpaid invoices that are 30 days or older
+$sql = "SELECT * FROM invoices WHERE invoice_status = 'Due' AND invoice_date <= DATE_SUB(CURDATE(), INTERVAL 30 DAY)";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $invoiceID = $row['id'];
+        $dueAmount = $row['due_amount'];
+        $grandTotal = $row['grand_total'];
+
+        // Calculate new due amount after adding the grand total
+        $newDueAmount = $dueAmount + $grandTotal;
+
+        // Update the invoice with the new due amount and set status to 'Paid' if new due amount is 0
+        $updateSql = "UPDATE invoices SET due_amount = $newDueAmount, invoice_status = " . (($newDueAmount == 0) ? "'Paid'" : "'Due'") . " WHERE id = $invoiceID";
+
+        if ($conn->query($updateSql) === TRUE) {
+            echo "Invoice with ID $invoiceID updated successfully.\n";
+        } else {
+            echo "Error updating invoice with ID $invoiceID: " . $conn->error . "\n";
+        }
+    }
+} else {
+    echo "No invoices to update.\n";
+}
+
+$conn->close();
+?>

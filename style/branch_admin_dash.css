@@ -1,0 +1,112 @@
+/* styles.css */
+     /* Custom styles for bigger square buttons */
+     
+
+/* Center the heading */
+body {
+    background-image: url('assests/white.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+.btn-square {
+    width: 150px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+h1.text-right {
+    text-align: center;
+}
+
+
+.row.buttons {
+    justify-content: center;
+}
+
+.row.buttons .col-md-2 {
+    margin-bottom: 15px;
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+.col-md-6.text-right {
+    text-align: center;
+    margin: 0 auto;
+}
+.table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fields{
+    padding-top: 40px;
+}
+/* styles.css */
+
+/* Center the text within the button */
+.btn-square.pt-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1{
+    padding-top: 30px;
+    padding-left: 25%;
+}
+.header {
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+.fields .btn {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.fields .btn:before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Start from the bottom */
+    right: 0; /* Start from the right */
+    width: 0; /* Start with 0 width */
+    height: 0; /* Start with 0 height */
+    background-color: #3498db; /* Set the fill color here */
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.fields .btn span {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.fields .btn:hover:before {
+    width: 100%; /* Fill the width on hover */
+    height: 100%; /* Fill the height on hover */
+}
+
+
+.fields .btn:hover span {
+    color: #f9f9f9; /* Set the text color during hover */
+    font-weight: bold; /* Make the text bold during hover */
+}
+
+
+
