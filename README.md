@@ -12,10 +12,15 @@ This application contains two users.
 steps to run this projects:
 
 step1:  dowload this project and extract in under the folder C:\xampp\htdocs.
+
 step2: open the xampp server and run apache and mysql.
+
 step3: open phpmyadmin and create database with name tuitiondata.
+
 step4: after creating database click the import button and choose the sql file from tuitionmanage folder named with tuitiondata.sql.
+
 step5: go to login page with url http://localhost/tuitionmanage/master_login.php.
+
 step6: provide the username and password and run the application.
 
 
