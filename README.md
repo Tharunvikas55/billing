@@ -19,9 +19,6 @@ step5: go to login page with url http://localhost/tuitionmanage/master_login.php
 step6: provide the username aand password and run the application.
 
 
-
-This repo is for Tutor-billing-system Team
-
 download this for exporting invoice report as pdf.
 
 under this download this file:
