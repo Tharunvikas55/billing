@@ -1,35 +1,39 @@
-**This Application for Tuition billing management for separate brranch **
+🎓 Billing System
+This application is designed to manage tuition billing across multiple branches with distinct user roles. It offers an intuitive interface for both Master and Admin users to efficiently manage subjects, fees, invoices, and students.
 
-This application contains two users.
+👥 User Roles
+1. 🛡️ Master
+Single Master: The Master user oversees all branches.
+Key Responsibilities:
+➕ Add new Admins to each branch.
+📚 Add new subjects and set taxes and fees for each subject by branch.
+🏢 Add new branches.
+📊 View invoice reports for all branches on the dashboard.
+2. 🏫 Admin
+Separate Admins for Each Branch: Each branch is managed by its respective Admin.
+Key Responsibilities:
+📝 Add students to the branch.
+🧾 Generate, pay dues, and reverse invoices.
+👁️ View branch-specific invoice reports.
+🚀 Project Setup and Installation
+Follow these steps to set up the Tuition Billing Management application on your local machine:
 
-1. Master.
-      there is only one master for all branches. master user can add new admin to each branch, add new subjects and fix tax and fees for each subject in branch, add new branches.
-      Master can view all branch invoice report on his dashboard.
-2. Admin
-     There is separate admin for each branches.
-     where each branch can add student , genereate invoice and pay due and reverse invoice and view invoice for that particular branch.
+Step 1: ⬇️ Download and Extract the Project
+Download the project and extract it to the folder: C:\xampp\htdocs.
+Step 2: ⚙️ Run XAMPP Server
+Open XAMPP and start both Apache and MySQL services.
+Step 3: 🛠️ Create Database
+Open your browser and navigate to http://localhost/phpmyadmin.
+Create a new database with the name tuitiondata.
+Step 4: 📥 Import the Database
+After creating the database, click on the "Import" tab in phpMyAdmin.
+Choose the tuitiondata.sql file from the tuitionmanage folder and import it.
+Step 5: 🌐 Access the Application
+Open your browser and go to the login page at http://localhost/tuitionmanage/master_login.php.
+Log in using the provided credentials to access the application.
+🧾 Exporting Invoice Reports as PDF
+To enable PDF export functionality for invoice reports:
 
-steps to run this projects:
-
-step1:  dowload this project and extract in under the folder C:\xampp\htdocs.
-
-step2: open the xampp server and run apache and mysql.
-
-step3: open phpmyadmin and create database with name tuitiondata.
-
-step4: after creating database click the import button and choose the sql file from tuitionmanage folder named with tuitiondata.sql.
-
-step5: go to login page with url http://localhost/tuitionmanage/master_login.php.
-
-step6: provide the username and password and run the application.
-
-
-download this for exporting invoice report as pdf.
-
-under this download this file:
-
-https://github.com/dompdf/dompdf/releases/download/v2.0.7/dompdf-2.0.7.zip
-
-after downloading it. add it in porject folder.
-
-   
+📦 Download the dompdf library from the following link:
+dompdf-2.0.7.zip
+🗂️ Extract the downloaded dompdf folder and add it to your project directory.
